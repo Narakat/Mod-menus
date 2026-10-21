@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^git status --short && printf '\\\\n--- root files ---\\\\n' && ls -la$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python - <<'PY'\nfrom pathlib import Path\nimport re\np=Path\\('polytrack\\.html'\\)\ns=p\\.read_text\\(\\)\nprint\\('script tags:', \\[\\(m\\.start\\(\\), s\\[m\\.start\\(\\):m\\.start\\(\\)\\+80\\]\\) for m in re\\.finditer\\(r'<script\\\\b\\[\\^>\\]\\*>',s,re\\.I\\)\\]\\)\nprint\\('style tags:', \\[\\(m\\.start\\(\\), s\\[m\\.start\\(\\):m\\.start\\(\\)\\+80\\]\\) for m in re\\.finditer\\(r'<style\\\\b\\[\\^>\\]\\*>',s,re\\.I\\)\\]\\)\nfor needle in \\['<body', '</script>', 'requestAnimationFrame', 'performance\\.now', 'localStorage', 'keydown', 'timeScale', 'deltaTime', 'reset'\\]:\n    hits=\\[m\\.start\\(\\) for m in re\\.finditer\\(re\\.escape\\(needle\\),s,re\\.I\\)\\]\n    print\\(needle, len\\(hits\\), hits\\[:10\\]\\)\nprint\\('\\\\nTail after closing script:'\\)\nfor m in list\\(re\\.finditer\\(r'</script\\\\s\\*>',s,re\\.I\\)\\)\\[-3:\\]:\n    print\\('\\\\n---',m\\.start\\(\\), '---\\\\n',repr\\(s\\[m\\.end\\(\\):m\\.end\\(\\)\\+250\\]\\)\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

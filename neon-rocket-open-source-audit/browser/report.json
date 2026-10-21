@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-21T23:01:21.683Z",
+  "baseURL": "http://localhost:3457",
+  "method": "Isolated installed Chrome, CDP trusted mouse/keyboard, read-only runtime diagnostics",
+  "checks": [],
+  "cases": [],
+  "limitations": [
+    "No physical gamepad or mobile hardware tested.",
+    "Goal/final query fixtures deliberately use legacy engine; not production RocketSim scoring proof.",
+    "Local URL evidence is not public deployment certification."
+  ],
+  "mode": "full",
+  "skipped": [],
+  "fatal": "Error: Chrome did not launch: \n    at file:///workspaces/Mod-menus/NeonRocket/scripts/browser-qa.mjs:82:18",
+  "finishedAt": "2026-10-21T23:01:31.834Z",
+  "passed": false
+}
